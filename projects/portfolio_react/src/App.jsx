@@ -12,6 +12,7 @@ import LifecycleDemo from './components/LifecycleDemo';
 import BadCounter from './components/BadCounter';
 import GoodCounter from './components/GoodCounter';
 import FlowDemo from './components/FLowDemo';
+import SimpleVariables from './components/SimpleVariables';
 function App() {
   return (
     <div className="app">
@@ -28,6 +29,9 @@ function App() {
           <BadCounter />
           <GoodCounter />
           <FlowDemo />
+
+          <hr style={{ margin: '2rem 0' }} />
+          <SimpleVariables />
         </section>
 
         <Hero />
