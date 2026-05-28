@@ -1,17 +1,17 @@
 # Answers
 
-## BÃ i 0.1 â€” Cháº¡y React Ä‘áº§u tiÃªn
+## Bài 0.1 — Chạy React đầu tiên
 
-**1. File `.jsx` khÃ¡c gÃ¬ file `.js`?**
-- `.js` lÃ  file JavaScript thÃ´ng thÆ°á»ng, chá»‰ chá»©a code JavaScript tiÃªu chuáº©n.
-- `.jsx` (JavaScript XML) lÃ  pháº§n má»Ÿ rá»™ng cÃº phÃ¡p cá»§a React, cho phÃ©p báº¡n viáº¿t mÃ£ giá»‘ng HTML trá»±c tiáº¿p bÃªn trong code JavaScript. Äiá»u nÃ y giÃºp cáº¥u trÃºc giao diá»‡n (UI) dá»… Ä‘á»c vÃ  dá»… hÃ¬nh dung hÆ¡n khi viáº¿t React Component. DÆ°á»›i luá»“ng cháº¡y, cÃ¡c Ä‘oáº¡n code giá»‘ng HTML trong JSX sáº½ Ä‘Æ°á»£c chuyá»ƒn Ä‘á»•i thÃ nh cÃ¡c lá»‡nh gá»i hÃ m JavaScript (vÃ­ dá»¥: `React.createElement`).
+**1. File `.jsx` khác gì file `.js`?**
+- `.js` là file JavaScript thông thường, chỉ chứa code JavaScript tiêu chuẩn.
+- `.jsx` (JavaScript XML) là phần mở rộng cú pháp của React, cho phép bạn viết mã giống HTML trực tiếp bên trong code JavaScript. Điều này giúp cấu trúc giao diện (UI) dễ đọc và dễ hình dung hơn khi viết React Component. Dưới luồng chạy, các đoạn code giống HTML trong JSX sẽ được chuyển đổi thành các lệnh gọi hàm JavaScript (ví dụ: `React.createElement`).
 
-**2. Táº¡i sao pháº£i `export default App`?**
-- Tá»« khÃ³a `export default` cho phÃ©p báº¡n xuáº¥t (export) hÃ m (Component) `App` ra bÃªn ngoÃ i Ä‘á»ƒ cÃ¡c file khÃ¡c cÃ³ thá»ƒ náº¡p (import) vÃ  sá»­ dá»¥ng nÃ³. Trong á»©ng dá»¥ng React (nhÆ° Ä‘Æ°á»£c táº¡o bá»Ÿi Vite), file `main.jsx` cáº§n import component `App` Ä‘á»ƒ render ra giao diá»‡n, do Ä‘Ã³ ta pháº£i export nÃ³. 
+**2. Tại sao phải `export default App`?**
+- Từ khóa `export default` cho phép bạn xuất (export) hàm (Component) `App` ra bên ngoài để các file khác có thể nạp (import) và sử dụng nó. Trong ứng dụng React (như được tạo bởi Vite), file `main.jsx` cần import component `App` để render ra giao diện, do đó ta phải export nó. 
 
-**3. Thá»­ xÃ³a `export default` â†’ chuyá»‡n gÃ¬ xáº£y ra?**
-- Náº¿u xÃ³a `export default`, project sáº½ bá»‹ bÃ¡o lá»—i compile (biÃªn dá»‹ch) hoáº·c lá»—i hiá»ƒn thá»‹ tráº¯ng trang.
-- LÃ½ do lÃ  file `main.jsx` Ä‘ang cá»‘ gáº¯ng import default tá»« file `App.jsx` (`import App from './App.jsx'`), nhÆ°ng vÃ¬ báº¡n Ä‘Ã£ xÃ³a export, nÃ³ sáº½ khÃ´ng tÃ¬m tháº¥y component nÃ o Ä‘á»ƒ import, dáº«n Ä‘áº¿n bÃ¡o lá»—i khÃ´ng tÃ¬m tháº¥y module Ä‘Æ°á»£c export.
+**3. Thử xóa `export default` → chuyện gì xảy ra?**
+- Nếu xóa `export default`, project sẽ bị báo lỗi compile (biên dịch) hoặc lỗi hiển thị trắng trang.
+- Lý do là file `main.jsx` đang cố gắng import default từ file `App.jsx` (`import App from './App.jsx'`), nhưng vì bạn đã xóa export, nó sẽ không tìm thấy component nào để import, dẫn đến báo lỗi không tìm thấy module được export.
 
 ## Bài 1.1 — Component render lần đầu
 
@@ -20,6 +20,7 @@
 
 **2. Khi nào nó sẽ render lại?**
 - Nó sẽ render lại khi state nội bộ của nó thay đổi (ví dụ thông qua hàm setState) hoặc khi props (dữ liệu được truyền từ cha xuống) thay đổi.
+
 ## Bài 1.2 — Biến "bình thường" vs useState
 
 **1. Chạy BadCounter → nhấn nút → thấy gì?**
