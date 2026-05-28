@@ -20,3 +20,13 @@
 
 **2. Khi nào nó sẽ render lại?**
 - Nó sẽ render lại khi state nội bộ của nó thay đổi (ví dụ thông qua hàm setState) hoặc khi props (dữ liệu được truyền từ cha xuống) thay đổi.
+## Bài 1.2 — Biến "bình thường" vs useState
+
+**1. Chạy BadCounter → nhấn nút → thấy gì?**
+- Khi nhấn nút Tăng, biến count tăng lên liên tục trong Console (1, 2, 3...). Tuy nhiên, số hiển thị trên giao diện vẫn đứng im ở số 0. Việc thay đổi biến thông thường không tự động báo cho React biết để cập nhật màn hình.
+
+**2. Chạy GoodCounter → nhấn nút → thấy gì?**
+- Số đếm trên giao diện màn hình lập tức cập nhật và tăng lên. Nhờ dùng useState, mỗi khi gọi hàm setCount, React nhận biết dữ liệu trạng thái đã thay đổi và tiến hành re-render lại giao diện.
+
+**3. Mở Console → thấy log "render" mấy lần?**
+- Nếu bạn mở FlowDemo và bấm chuyển bước, mỗi lần bấm bạn sẽ thấy dòng chữ "🔄 Component render!" được in ra thêm một lần. Điều này cho thấy mỗi lần state thay đổi, function component được chạy lại từ đầu.
