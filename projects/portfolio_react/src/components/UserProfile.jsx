@@ -1,4 +1,4 @@
-function UserProfile() {
+export function UserProfile() {
     return (
         <div className="profile">
             <h1>Hồ sơ cá nhân</h1>
