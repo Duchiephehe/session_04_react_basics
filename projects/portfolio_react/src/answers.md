@@ -1,4 +1,4 @@
-# Answers cho các bài tập
+# Answers
 
 ## Bài 0.1 — Chạy React đầu tiên
 
